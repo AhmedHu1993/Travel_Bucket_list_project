@@ -32,3 +32,14 @@ post "/countries/:id/delete" do
   country.delete()
   redirect to '/countries'
 end
+
+get "/countries/:id/edit" do
+  @country = Country.find_by_id(params[:id])
+  @continents = Continent.all
+  erb(:'countries/edit')
+end
+
+post "/countries/:id" do
+  Country.new(params).update
+  redirect to '/countries'
+end
