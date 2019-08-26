@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Travel Bucket List</title>
+    <link rel="icon" href="https://icon-library.net/images/hammock-icon/hammock-icon-10.jpg" />
+
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <main>
+      <nav id="menu">
+        <ul class="flex">
+          <li>
+            <a href="/cities">Cities</a>
+          </li>
+          <li>
+            <a href="/countries">Countries</a>
+          </li>
+          <li>
+            <a href="/continents">Continents</a>
+          </li>
+        </ul>
+        <img src="/images/logo.png" alt="logo" id="app_logo">
+      </nav>
+      <section id="content">
+        <%= yield %>
+      </section>
+    </main>
+  </body>
+</html>

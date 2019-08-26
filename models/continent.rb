@@ -42,4 +42,12 @@ class Continent
     return results.map { |hash| Country.new( hash ) }
   end
 
+  def cities
+    sql = "SELECT cities.* FROM cities INNER JOIN countries ON
+    countries.id = cities.country_id WHERE continent_id = $1"
+    values = [@id]
+    results = SqlRunner.run( sql, values )
+    return results.map { |hash| City.new( hash ) }
+  end
+
 end

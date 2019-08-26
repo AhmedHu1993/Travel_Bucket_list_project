@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  float: left;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+li{
+  padding-right: 30px;
+  display: block;
+}
+
+#app_logo {
+  float: right;
+  width: 200px;
+  height: 200px;
+}
+
+#menu {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
