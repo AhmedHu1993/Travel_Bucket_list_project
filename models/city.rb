@@ -39,7 +39,7 @@ class City
   end
 
   def update()
-    sql = "UPDATE countries
+    sql = "UPDATE cities
     SET (name, country_id, visited) = ($1, $2, $3)
     WHERE id = $4"
     values = [@name, @country_id, @visited, @id]
@@ -73,7 +73,13 @@ class City
     else
       return "To Be Visited"
     end
+  end
 
+  def self.find_by_id(id)
+    sql = "SELECT * FROM cities WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return City.new( results.first )
   end
 
 end

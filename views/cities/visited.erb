@@ -1,17 +1,11 @@
-<h1>Cities</h1>
+<h1>Visited Cities</h1>
 
 <ul>
-  <li>
-    <a href="/cities">All Cities</a>
-  </li>
   <li>
     <a href="/cities/showvisited">Show Visited Cities</a>
   </li>
   <li>
     <a href="/cities/showtovisit">Show to Visit Cities</a>
-  </li>
-  <li>
-    <a href="/cities/new">Add new</a>
   </li>
 </ul>
 <hr>
@@ -25,7 +19,7 @@
     <th></th>
     <th>Visited/To Visit</th>
   </tr>
-  <% for city in @cities %>
+  <% for city in @visited_cities %>
   <tr>
     <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
     <td>|</td>

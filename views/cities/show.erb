@@ -1,0 +1,11 @@
+<h1><%= @city.name %></h1>
+
+<h2>Country: <%= @city.country.name %></h2>
+<h2>Continent: <%= @city.country.continent.name %></h2>
+
+<p><a href="/cities/<%= @city.id %>/edit">Edit</a></p>
+
+<form action="/cities/<%= @city.id %>/delete" method="post">
+  <input type="submit" value="Delete City"/>
+</form>
+  <hr />
