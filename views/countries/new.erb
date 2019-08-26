@@ -1,0 +1,17 @@
+<h1>New Country</h1>
+
+<form method="post" action="/countries">
+
+  <label for="name">Country Name:</label>
+  <input type="text" name="name" id="name"/><br><br>
+
+  <label for="continent_select">Select Continent:</label>
+  <select name="continent_id" id="continent_select">
+    <% @continents.each do |continent| %>
+    <option value=<%= continent.id %>><%= continent.name.capitalize %></option>
+    <% end %>
+  </select>
+  <br><br>
+
+  <input type="submit" value="Add Country"/>
+</form>

@@ -1,0 +1,28 @@
+<h1>Countries</h1>
+
+<ul>
+  <li>
+    <a href="/countries">Countries list</a>
+  </li>
+  <li>
+    <a href="/countries/new">Add new</a>
+  </li>
+</ul>
+<hr>
+<table>
+  <tr>
+    <th>Country Name</th>
+    <th></th>
+    <th>Continent</th>
+    <th></th>
+  </tr>
+  <% for country in @countries %>
+  <tr>
+    <td><a href="/countries/<%= country.id %>"><%= country.name %></a></td>
+    <td>|</td>
+    <td><%= country.continent.name %></td>
+    <td>|</td>
+    <!-- <td><a href="#" class="delete_city"></a></td> -->
+  </tr>
+  <% end %>
+</table>

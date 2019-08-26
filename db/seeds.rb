@@ -15,8 +15,28 @@ continent2 = Continent.new({
   "name" => "Europe"
   })
 
+continent3 = Continent.new({
+  "name" => "Asia"
+  })
+
+continent4 = Continent.new({
+  "name" => "North-America"
+  })
+
+continent5 = Continent.new({
+  "name" => "South-America"
+  })
+
+continent6 = Continent.new({
+  "name" => "Australia"
+  })
+
 continent1.save()
 continent2.save()
+continent3.save()
+continent4.save()
+continent5.save()
+continent6.save()
 
 country1 = Country.new({
   "name" => "Egypt",

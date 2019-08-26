@@ -1,0 +1,12 @@
+<h1><%= @country.name %></h1>
+
+<h2>Continent: <%= @country.continent.name %></h2>
+
+<p><a href="/countries/<%= @country.id %>/edit">Edit</a></p>
+
+<form action="/countries/<%= @country.id %>/delete" method="post">
+  <input type="submit" value="Delete Country"/>
+</form>
+
+<!-- show the saved cities late -->
+  <hr />

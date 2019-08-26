@@ -5,5 +5,5 @@ also_reload( '../models/*' )
 
 get '/continents' do
   @continents = Continent.all()
-  erb ( :"zombies/index" )
+  erb ( :"continents/index" )
 end
