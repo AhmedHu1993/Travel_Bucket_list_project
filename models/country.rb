@@ -19,6 +19,12 @@ class Country
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM countries"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Country.new( hash ) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM countries"
     SqlRunner.run( sql )
@@ -44,6 +50,13 @@ class Country
     values = [@id]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }
+  end
+
+  def continent()
+    sql = "SELECT * FROM continents WHERE id = $1"
+    values = [@continent_id]
+    results = SqlRunner.run( sql, values )
+    return Continent.new( results.first )
   end
 
 end

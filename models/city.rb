@@ -20,6 +20,12 @@ class City
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM cities"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| City.new( hash ) }
+  end
+
   def self.delete_all()
     sql = "DELETE FROM cities"
     SqlRunner.run( sql )
@@ -52,6 +58,22 @@ class City
     values = [false]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }
+  end
+
+  def country()
+    sql = "SELECT * FROM countries WHERE id = $1"
+    values = [@country_id]
+    results = SqlRunner.run( sql, values )
+    return Country.new( results.first )
+  end
+
+  def status
+    if @visited == "t"
+      return "Visited"
+    else
+      return "To Be Visited"
+    end
+
   end
 
 end
