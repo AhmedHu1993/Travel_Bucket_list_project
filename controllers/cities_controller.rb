@@ -61,3 +61,9 @@ post '/sights' do
   sight.save
   redirect to("/cities")
 end
+
+post "/sights/:id/delete" do
+  sight = Sight.find_by_id(params[:id])
+  sight.delete()
+  redirect to '/cities'
+end

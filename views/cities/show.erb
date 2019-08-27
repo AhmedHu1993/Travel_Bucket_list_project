@@ -5,12 +5,17 @@
 
 <h3>Sight Names</h3>
 <% for sight in @sights %>
-<ul>
-    <li><%= sight.name %></li>
+<ul >
+    <li class="sights_list"><%= sight.name %>
+      <form  action="/sights/<%= sight.id %>/delete" method="post" style="margin-left:40px;">
+        <input type="image" src="/images/close_icon.png" alt="delete" id="close_icon">
+      </form>
+     </li>
+
 </ul>
 <% end %>
 <form action="/sights" method="post">
-  <input type="text" name="name" value="">
+  <input type="text" name="name" placeholder="New Sight">
   <input type="hidden" name="city_id" value="<%= @city.id %>">
   <input type="submit" value="new sight">
 </form>

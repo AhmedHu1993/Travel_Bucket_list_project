@@ -5,6 +5,10 @@
   list-style-type: none;
 }
 
+.sights_list{
+  display: inline-flex;
+}
+
 ul {
   padding: 0px;
   margin: 0px;
@@ -13,6 +17,14 @@ ul {
 li{
   padding-right: 30px;
   display: block;
+}
+#close_icon {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+}
+#close_icon:hover {
+  opacity: 1;
 }
 
 #app_logo {
