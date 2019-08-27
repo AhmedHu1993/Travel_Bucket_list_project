@@ -82,4 +82,11 @@ class City
     return City.new( results.first )
   end
 
+  def sights
+    sql = "SELECT * FROM sights WHERE city_id = $1"
+    values = [@id]
+    results = SqlRunner.run( sql, values )
+    return results.map { |hash| Sight.new( hash ) }
+  end
+
 end

@@ -1,3 +1,4 @@
+DROP TABLE sights;
 DROP TABLE cities;
 DROP TABLE countries;
 DROP TABLE continents;
@@ -21,4 +22,11 @@ CREATE TABLE cities
   name VARCHAR(255),
   country_id INT8 REFERENCES countries(id) ON DELETE CASCADE,
   visited BOOLEAN
+);
+
+CREATE TABLE sights
+(
+  id SERIAL8 primary key,
+  name VARCHAR(255),
+  city_id INT8 REFERENCES cities(id) ON DELETE CASCADE
 );

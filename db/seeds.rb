@@ -1,8 +1,10 @@
 require_relative("../models/continent.rb")
 require_relative("../models/country.rb")
 require_relative("../models/city.rb")
+require_relative("../models/sight.rb")
 require("pry-byebug")
 
+Sight.delete_all()
 City.delete_all()
 Country.delete_all()
 Continent.delete_all()
@@ -92,6 +94,18 @@ city2.save()
 city3.save()
 city4.save()
 
+sight1 = Sight.new({
+  "name" => "Bibliotheca Alexandrina",
+  "city_id" => city2.id
+  })
+
+sight2 = Sight.new({
+  "name" => "Montaza Palace",
+  "city_id" => city2.id
+  })
+
+sight1.save
+sight2.save
 
 binding.pry
 nil
