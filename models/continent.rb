@@ -22,10 +22,10 @@ class Continent
     return results.map { |hash| Continent.new( hash ) }
   end
 
-  def self.find( id )
+  def self.find_by_name( name )
     sql = "SELECT * FROM continents
-    WHERE id = $1"
-    values = [id]
+    WHERE name = $1"
+    values = [name]
     results = SqlRunner.run( sql, values )
     return Continent.new( results.first )
   end

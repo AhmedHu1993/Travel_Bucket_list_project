@@ -3,15 +3,34 @@
 
 <br><br><br>
 <section id="search_bars">
-  <form class="continent" action="/search/continent" method="post">
-    <label for="continent_select">Search by Continent</label><br>
-    <select name="id" id="continent_select">
+  <form class="continent" action="/continents/name" method="post">
+    <label for="continent_select">Jump to Continent</label><br>
+    <select name="name" id="continent_select">
       <% @continents.each do |continent| %>
-      <option value=<%= continent.id %>><%= continent.name.capitalize %></option>
+      <option value=<%= continent.name %>><%= continent.name.capitalize %></option>
       <% end %>
     </select>
     <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
-    <input type="hidden" name="" value="">
+  </form>
+
+  <form class="country" action="/countries/id" method="post">
+    <label for="country_select">Jumb to Country</label><br>
+    <select name="id" id="country_select">
+      <% @countries.each do |country| %>
+      <option value=<%= country.id %>><%= country.name.capitalize %></option>
+      <% end %>
+    </select>
+    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
+  </form>
+
+  <form class="city" action="/cities/id" method="post">
+    <label for="city_select">Jumb to City</label><br>
+    <select name="id" id="city_select">
+      <% @cities.each do |city| %>
+      <option value=<%= city.id %>><%= city.name.capitalize %></option>
+      <% end %>
+    </select>
+    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
   </form>
 
 </section>

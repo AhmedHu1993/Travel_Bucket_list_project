@@ -45,6 +45,11 @@ post "/cities" do
   redirect to("/cities")
 end
 
+post "/cities/id" do
+  redirect to "/cities/#{params["id"]}"
+end
+
+
 post "/cities/:id" do
   City.new(params).update
   redirect to '/cities'
