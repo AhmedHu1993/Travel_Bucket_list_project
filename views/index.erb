@@ -15,7 +15,7 @@
     </form>
 
     <form class="country" action="/countries/id" method="post">
-      <label for="country_select">Jumb to Country</label><br>
+      <label for="country_select">Jump to Country</label><br>
       <select name="id" id="country_select" class="select_menu">
         <% @countries.each do |country| %>
         <option value=<%= country.id %>><%= country.name.capitalize %></option>
@@ -25,7 +25,7 @@
     </form>
 
     <form class="city" action="/cities/id" method="post">
-      <label for="city_select">Jumb to City</label><br>
+      <label for="city_select">Jump to City</label><br>
       <select name="id" id="city_select" class="select_menu">
         <% @cities.each do |city| %>
         <option value=<%= city.id %>><%= city.name.capitalize %></option>
