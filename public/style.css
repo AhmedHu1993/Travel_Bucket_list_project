@@ -13,7 +13,11 @@
 .home_page {
   background-image: url("images/index1.jpg");
   background-size: cover;
-  height: 600px;
+  width:  auto;
+  height: 650px;
+  margin: 0px;
+  padding: 0px;
+
 }
 
 .image {
@@ -53,7 +57,7 @@ li{
 #close_icon {
   width: 10px;
   height: 10px;
-  opacity: 0;
+  opacity: 0.1;
 }
 #close_icon:hover {
   opacity: 1;
@@ -71,7 +75,7 @@ li{
 #app_logo {
   float: right;
   width: auto;
-  height: 150px;
+  height: 99px;
 }
 
 #menu {
@@ -79,6 +83,6 @@ li{
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  height: 150px;
+  height: 100px;
   align-content: center;
 }
