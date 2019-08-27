@@ -21,7 +21,7 @@ class Sight
   def self.all()
     sql = "SELECT * FROM sights"
     results = SqlRunner.run( sql )
-    return results.map { |hash| City.new( hash ) }
+    return results.map { |hash| Sight.new( hash ) }
   end
 
   def self.delete_all()

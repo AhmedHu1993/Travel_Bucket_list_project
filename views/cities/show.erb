@@ -3,6 +3,18 @@
 <h2>Country: <%= @city.country.name %></h2>
 <h2>Continent: <%= @city.country.continent.name %></h2>
 
+<h3>Sight Names</h3>
+<% for sight in @sights %>
+<ul>
+    <li><%= sight.name %></li>
+</ul>
+<% end %>
+<form action="/sights" method="post">
+  <input type="text" name="name" value="">
+  <input type="hidden" name="city_id" value="<%= @city.id %>">
+  <input type="submit" value="new sight">
+</form>
+
 <p><a href="/cities/<%= @city.id %>/edit">Edit</a></p>
 
 <form action="/cities/<%= @city.id %>/delete" method="post">

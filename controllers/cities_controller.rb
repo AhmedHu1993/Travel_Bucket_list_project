@@ -4,6 +4,7 @@ require( 'pry-byebug' )
 require_relative( '../models/city.rb' )
 require_relative( '../models/continent.rb' )
 require_relative( '../models/country.rb' )
+require_relative( '../models/sight.rb' )
 also_reload( '../models/*' )
 
 get '/cities' do
@@ -28,6 +29,7 @@ end
 
 get '/cities/:id' do
   @city = City.find_by_id(params[:id])
+  @sights = @city.sights()
   erb(:'cities/show')
 end
 
@@ -52,4 +54,10 @@ post "/cities/:id/delete" do
   city = City.find_by_id(params[:id])
   city.delete()
   redirect to '/cities'
+end
+
+post '/sights' do
+  sight = Sight.new(params)
+  sight.save
+  redirect to("/cities")
 end
