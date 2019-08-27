@@ -9,6 +9,16 @@
   display: inline-flex;
 }
 
+.image {
+  max-width: 1250px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.world_map {
+  max-width: 1250px;
+}
+
 ul {
   padding: 0px;
   margin: 0px;
