@@ -1,1 +1,16 @@
 <h1 id="main_page_title">HELLO BUBBLER ^_^</h1>
+
+<br><br><br><br><br>
+<section id="search_bars">
+  <form class="continent" action="/search/continent" method="post">
+    <label for="continent_select">Search by Continent</label><br>
+    <select name="id" id="continent_select">
+      <% @continents.each do |continent| %>
+      <option value=<%= continent.id %>><%= continent.name.capitalize %></option>
+      <% end %>
+    </select>
+    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
+    <input type="hidden" name="" value="">
+  </form>
+
+</section>
