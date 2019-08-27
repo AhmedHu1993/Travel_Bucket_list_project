@@ -3,10 +3,17 @@
   flex-direction: row;
   float: left;
   list-style-type: none;
+  align-items: center;
 }
 
 .sights_list{
   display: inline-flex;
+}
+
+.home_page {
+  background-image: url("images/index1.jpg");
+  background-size: cover;
+  height: 600px;
 }
 
 .image {
@@ -17,6 +24,14 @@
 
 .world_map {
   max-width: 1250px;
+}
+
+.select_menu {
+  height: 30px;
+  width: 160px;
+}
+body {
+  font-family: 'Acme', cursive;
 }
 
 ul {
@@ -55,8 +70,8 @@ li{
 
 #app_logo {
   float: right;
-  width: 350px;
-  height: 170px;
+  width: auto;
+  height: 150px;
 }
 
 #menu {
@@ -64,3 +79,6 @@ li{
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+  height: 150px;
+  align-content: center;
+}

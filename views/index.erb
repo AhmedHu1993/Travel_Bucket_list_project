@@ -1,36 +1,39 @@
-<img src="/images/index1.jpg" alt="background" class="image">
+<section class="home_page">
 
+  <!-- <img src="/images/index1.jpg" alt="background" class="image"> -->
 
-<br><br><br>
-<section id="search_bars">
-  <form class="continent" action="/continents/name" method="post">
-    <label for="continent_select">Jump to Continent</label><br>
-    <select name="name" id="continent_select">
-      <% @continents.each do |continent| %>
-      <option value=<%= continent.name %>><%= continent.name.capitalize %></option>
-      <% end %>
-    </select>
-    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
-  </form>
+  <br><br><br>
+  <section id="search_bars">
+    <form class="continent" action="/continents/name" method="post">
+      <label for="continent_select">Jump to Continent</label><br>
+      <select name="name" id="continent_select" class="select_menu">
+        <% @continents.each do |continent| %>
+        <option value=<%= continent.name %>><%= continent.name.capitalize %></option>
+        <% end %>
+      </select>
+      <input type="image" src="/images/search.png" alt="search" id="search_icon">
+    </form>
 
-  <form class="country" action="/countries/id" method="post">
-    <label for="country_select">Jumb to Country</label><br>
-    <select name="id" id="country_select">
-      <% @countries.each do |country| %>
-      <option value=<%= country.id %>><%= country.name.capitalize %></option>
-      <% end %>
-    </select>
-    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
-  </form>
+    <form class="country" action="/countries/id" method="post">
+      <label for="country_select">Jumb to Country</label><br>
+      <select name="id" id="country_select" class="select_menu">
+        <% @countries.each do |country| %>
+        <option value=<%= country.id %>><%= country.name.capitalize %></option>
+        <% end %>
+      </select>
+      <input type="image" src="/images/search.png" alt="search" id="search_icon">
+    </form>
 
-  <form class="city" action="/cities/id" method="post">
-    <label for="city_select">Jumb to City</label><br>
-    <select name="id" id="city_select">
-      <% @cities.each do |city| %>
-      <option value=<%= city.id %>><%= city.name.capitalize %></option>
-      <% end %>
-    </select>
-    <input type="image" src="/images/search-icon.png" alt="search" id="search_icon">
-  </form>
+    <form class="city" action="/cities/id" method="post">
+      <label for="city_select">Jumb to City</label><br>
+      <select name="id" id="city_select" class="select_menu">
+        <% @cities.each do |city| %>
+        <option value=<%= city.id %>><%= city.name.capitalize %></option>
+        <% end %>
+      </select>
+      <input type="image" src="/images/search.png" alt="search" id="search_icon">
+    </form>
+
+  </section>
 
 </section>
