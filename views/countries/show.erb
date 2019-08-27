@@ -2,11 +2,29 @@
 
 <h2>Continent: <%= @country.continent.name %></h2>
 
+
+<table>
+  <tr>
+    <th>City</th>
+    <th></th>
+    <th>Visited/To Visit</th>
+  </tr>
+  <% for city in @cities %>
+  <tr>
+    <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
+    <td>|</td>
+    <td><%= city.status %></td>
+    <td>|</td>
+    <!-- <td><a href="#" class="delete_city"></a></td> -->
+  </tr>
+  <% end %>
+</table>
+
 <p><a href="/countries/<%= @country.id %>/edit">Edit</a></p>
 
 <form action="/countries/<%= @country.id %>/delete" method="post">
   <input type="submit" value="Delete Country"/>
+  <h5 style="color:red;">WARNING DELETING THE COUNTRY WILL DELETE ALL ITS CITIES!!</h5>
 </form>
 
-<!-- show the saved cities late -->
-  <hr />
+<hr />
