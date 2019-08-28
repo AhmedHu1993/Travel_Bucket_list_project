@@ -21,6 +21,7 @@
     <th></th>
     <th>Country</th>
     <th></th>
+    <th></th>
     <th>Continent</th>
     <th></th>
     <th>Visited/To Visit</th>
@@ -30,6 +31,7 @@
     <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
     <td>|</td>
     <td><%= city.country.name %></td>
+    <td><img src="<%= city.country.flag %>" alt="" id="flag_icon"></td>
     <td>|</td>
     <td><%= city.country.continent.name %></td>
     <td>|</td>

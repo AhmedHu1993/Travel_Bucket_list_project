@@ -6,6 +6,11 @@
   align-items: center;
 }
 
+.c_flag {
+  width: 300px;
+  padding-right: 175px;
+}
+
 .sights_list{
   display: inline-flex;
 }
@@ -18,7 +23,12 @@
   height: 650px;
   margin: 0px;
   padding: 0px;
-
+}
+.country_index {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .image {
