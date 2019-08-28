@@ -1,33 +1,35 @@
-<h1><%= @city.name %></h1>
+<section class="page">
+  <h1><%= @city.name %></h1>
 
-<h3>Country: <%= @city.country.name %>   <img src="<%= @city.country.flag %>" alt="" id="flag_icon"></h3>
-<h3>Continent: <%= @city.country.continent.name %></h3>
+  <h3>Country: <%= @city.country.name %>   <img src="<%= @city.country.flag %>" alt="" id="flag_icon"></h3>
+  <h3>Continent: <%= @city.country.continent.name %></h3>
 
-<h3>Sight Names:</h3>
-<table>
-  <% for sight in @sights %>
-  <tr>
-    <td>&#9674;</td>
-    <td><%= sight.name %></td>
-    <td></td>
-    <td><form  action="/sights/<%= sight.id %>/delete" method="post" style="margin-left:20px;">
-      <input type="image" src="/images/close_icon.png" alt="delete" id="close_icon">
-    </form></td>
-  </tr>
-  <% end %>
-</table>
+  <h3>Sight Names:</h3>
+  <table>
+    <% for sight in @sights %>
+    <tr>
+      <td>&#9674;</td>
+      <td><%= sight.name %></td>
+      <td></td>
+      <td><form  action="/sights/<%= sight.id %>/delete" method="post" style="margin-left:20px;">
+        <input type="image" src="/images/close_icon.png" alt="delete" id="close_icon">
+      </form></td>
+    </tr>
+    <% end %>
+  </table>
 
-<form action="/sights" method="post">
-  <input type="text" name="name" placeholder="New Sight">
-  <input type="hidden" name="city_id" value="<%= @city.id %>">
-  <input type="submit" value="Add sight">
-</form>
+  <form action="/sights" method="post">
+    <input type="text" name="name" placeholder="New Sight">
+    <input type="hidden" name="city_id" value="<%= @city.id %>">
+    <input type="submit" value="Add sight">
+  </form>
 
-<a target="_blank" href="https://en.wikipedia.org/wiki/<%= @city.name %>">want to know more?  &#155;&#155;</a>
-<hr />
+  <a target="_blank" href="https://en.wikipedia.org/wiki/<%= @city.name %>">want to know more?  &#155;&#155;</a>
+  <hr />
 
-<p><a href="/cities/<%= @city.id %>/edit" >Edit City</a></p>
+  <p><a href="/cities/<%= @city.id %>/edit" >Edit City</a></p>
 
-<form action="/cities/<%= @city.id %>/delete" method="post">
-  <input type="submit" value="Delete City"/>
-</form>
+  <form action="/cities/<%= @city.id %>/delete" method="post">
+    <input type="submit" value="Delete City"/>
+  </form>
+</section>

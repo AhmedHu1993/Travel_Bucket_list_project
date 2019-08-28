@@ -1,22 +1,24 @@
-<h1>New City</h1>
+<section class="page">
+  <h1>New City</h1>
 
-<form method="post" action="/cities">
+  <form method="post" action="/cities">
 
-  <label for="name">City Name:</label>
-  <input type="text" name="name" id="name"/><br><br>
+    <label for="name">City Name:</label>
+    <input type="text" name="name" id="name"/><br><br>
 
-  <label for="country_select">Select Country:</label>
-  <select name="country_id" id="country_select">
-    <% @countries.each do |country| %>
-    <option value=<%= country.id %>><%= country.name.capitalize %></option>
-    <% end %>
-  </select>
-  <br><br>
-  <label for="city_status">Select City Status:</label><br>
-  <input type="radio" name="visited" value="true" checked/>Visited City <br>
-  <input type="radio" name="visited" value="false" />To Visit City <br>
+    <label for="country_select">Select Country:</label>
+    <select name="country_id" id="country_select">
+      <% @countries.each do |country| %>
+      <option value=<%= country.id %>><%= country.name.capitalize %></option>
+      <% end %>
+    </select>
+    <br><br>
+    <label for="city_status">Select City Status:</label><br>
+    <input type="radio" name="visited" value="true" checked/>Visited City <br>
+    <input type="radio" name="visited" value="false" />To Visit City <br>
 
-  <br>
+    <br>
 
-  <input type="submit" value="Add City"/>
-</form>
+    <input type="submit" value="Add City"/>
+  </form>
+</section>

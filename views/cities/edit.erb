@@ -1,22 +1,24 @@
-<form method="post" action="/cities/<%= @city.id %>">
-  <label for="city-name">City Name:</label>
-  <input type="text" name="name" value="<%= @city.name %>"/><br><br>
+<section class="page">
+  <form method="post" action="/cities/<%= @city.id %>">
+    <label for="city-name">City Name:</label>
+    <input type="text" name="name" value="<%= @city.name %>"/><br><br>
 
-  <label for="country-name">Country Name:</label>
-  <select name="country_id" id="country_name" selected="<%= @city.country_id  %>">
-        <% @countries.each do |country| %>
-          <% if country.id == @city.country_id %>
-            <option value=<%= country.id %> selected><%= country.name.capitalize %></option>
-          <% else %>
-            <option value=<%= country.id %>><%= country.name.capitalize %></option>
-          <% end %>
-        <% end %>
-      </select>
-      <br>
-  <label for="city_status">Select City Status:</label><br><br>
-  <input type="radio" name="visited" value="true" <%= "checked" if @city.visited %>/>Visited City <br>
-  <input type="radio" name="visited" value="false" <%= "checked" if !@city.visited %>/>To Visit City <br>
+    <label for="country-name">Country Name:</label>
+    <select name="country_id" id="country_name" selected="<%= @city.country_id  %>">
+      <% @countries.each do |country| %>
+      <% if country.id == @city.country_id %>
+      <option value=<%= country.id %> selected><%= country.name.capitalize %></option>
+      <% else %>
+      <option value=<%= country.id %>><%= country.name.capitalize %></option>
+      <% end %>
+      <% end %>
+    </select>
+    <br>
+    <label for="city_status">Select City Status:</label><br><br>
+    <input type="radio" name="visited" value="true" <%= "checked" if @city.visited %>/>Visited City <br>
+    <input type="radio" name="visited" value="false" <%= "checked" if !@city.visited %>/>To Visit City <br>
 
-  <br>
-  <input type="submit" value="Edit City">
-</form>
+    <br>
+    <input type="submit" value="Edit City">
+  </form>
+</section>

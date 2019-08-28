@@ -29,6 +29,11 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-left: 5px;
+}
+
+.page {
+  margin-left: 5px;
 }
 
 .image {
@@ -46,6 +51,7 @@
 
 .world_map {
   max-width: 1250px;
+  height: auto;
 }
 
 .select_menu {
@@ -107,7 +113,7 @@ nav {
   background-image: url("images/flags1.png") ;
   background-repeat: no-repeat;
   height: 900px;
-
+  border-top: 1px solid #457B9D;
 }
 
 #search_bars {
@@ -161,5 +167,5 @@ nav {
   margin: : 2px;
   height: 100px;
   align-content: center;
-  border-bottom: 1px solid #457B9D;
+
 }

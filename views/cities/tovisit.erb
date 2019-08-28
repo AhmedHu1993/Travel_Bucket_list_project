@@ -1,35 +1,37 @@
-<h1>To Visit Cities</h1>
+<section class="page">
+  <h1>To Visit Cities</h1>
 
-<ul>
-  <li>
-    <a href="/cities/showvisited">Show Visited Cities</a>
-  </li>
-  <li>
-    <a href="/cities/showtovisit">Show to Visit Cities</a>
-  </li>
-</ul>
-<hr>
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Country</th>
-    <th></th>
-    <th>Continent</th>
-    <th></th>
-    <th>Visited/To Visit</th>
-  </tr>
-  <% for city in @to_visit_cities %>
-  <tr>
-    <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
-    <td>|</td>
-    <td><%= city.country.name %></td>
-    <td>|</td>
-    <td><%= city.country.continent.name %></td>
-    <td>|</td>
-    <td><%= city.status %></td>
-    <td>|</td>
-    <!-- <td><a href="#" class="delete_city"></a></td> -->
-  </tr>
-  <% end %>
-</table>
+  <ul>
+    <li>
+      <a href="/cities/showvisited">Show Visited Cities</a>
+    </li>
+    <li>
+      <a href="/cities/showtovisit">Show to Visit Cities</a>
+    </li>
+  </ul>
+  <hr>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th>Country</th>
+      <th></th>
+      <th>Continent</th>
+      <th></th>
+      <th>Visited/To Visit</th>
+    </tr>
+    <% for city in @to_visit_cities %>
+    <tr>
+      <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
+      <td>|</td>
+      <td><%= city.country.name %></td>
+      <td>|</td>
+      <td><%= city.country.continent.name %></td>
+      <td>|</td>
+      <td><%= city.status %></td>
+      <td>|</td>
+      <!-- <td><a href="#" class="delete_city"></a></td> -->
+    </tr>
+    <% end %>
+  </table>
+</section>

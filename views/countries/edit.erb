@@ -1,20 +1,22 @@
-<form method="post" action="/countries/<%= @country.id %>">
+<section class="page">
+  <form method="post" action="/countries/<%= @country.id %>">
 
-  <label for="country-name">Country Name:</label>
-  <input type="text" name="name" value="<%= @country.name %>"/><br><br>
+    <label for="country-name">Country Name:</label>
+    <input type="text" name="name" value="<%= @country.name %>"/><br><br>
 
-  <label for="continent-name">Continent Name:</label>
-  <select name="continent_id" id="continent_name" selected="<%= @country.continent_id  %>">
-        <% @continents.each do |continent| %>
-          <% if continent.id == @country.continent_id %>
-            <option value=<%= continent.id %> selected><%= continent.name.capitalize %></option>
-          <% else %>
-            <option value=<%= continent.id %>><%= continent.name.capitalize %></option>
-          <% end %>
-        <% end %>
-      </select>
-      <br>
+    <label for="continent-name">Continent Name:</label>
+    <select name="continent_id" id="continent_name" selected="<%= @country.continent_id  %>">
+      <% @continents.each do |continent| %>
+      <% if continent.id == @country.continent_id %>
+      <option value=<%= continent.id %> selected><%= continent.name.capitalize %></option>
+      <% else %>
+      <option value=<%= continent.id %>><%= continent.name.capitalize %></option>
+      <% end %>
+      <% end %>
+    </select>
+    <br>
 
-      <input type="submit" value="Edit Country">
+    <input type="submit" value="Edit Country">
 
-</form>
+  </form>
+</section>
