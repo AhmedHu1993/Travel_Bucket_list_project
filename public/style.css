@@ -125,6 +125,15 @@ a:hover {
   height: 99px;
 }
 
+#btn {
+  background-color: #457B9D;
+  color: white;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+
 #menu {
   width: auto;
   display: flex;
