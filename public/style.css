@@ -43,7 +43,7 @@
   width: 160px;
 }
 body {
-  font-family: 'Acme', cursive;
+  font-family: 'Nunito', sans-serif;
   color:  #1D3557;
 }
 
@@ -126,7 +126,7 @@ a:hover {
 }
 
 #btn {
-  background-color: #457B9D;
+  background-color: rgba(0, 137, 209, 255);;
   color: white;
   padding: 5px;
   padding-left: 10px;
