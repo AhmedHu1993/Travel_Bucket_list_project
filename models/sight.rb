@@ -19,7 +19,7 @@ class Sight
   end
 
   def self.all()
-    sql = "SELECT * FROM sights"
+    sql = "SELECT * FROM sights ORDER BY id"
     results = SqlRunner.run( sql )
     return results.map { |hash| Sight.new( hash ) }
   end

@@ -17,7 +17,7 @@ class Continent
   end
 
   def self.all()
-    sql = "SELECT * FROM continents"
+    sql = "SELECT * FROM continents ORDER BY id"
     results = SqlRunner.run( sql )
     return results.map { |hash| Continent.new( hash ) }
   end
@@ -36,7 +36,7 @@ class Continent
   end
 
   def countries()
-    sql = "SELECT * FROM countries WHERE continent_id = $1"
+    sql = "SELECT * FROM countries WHERE continent_id = $1 ORDER BY id"
     values = [@id]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| Country.new( hash ) }
@@ -44,7 +44,7 @@ class Continent
 
   def cities
     sql = "SELECT cities.* FROM cities INNER JOIN countries ON
-    countries.id = cities.country_id WHERE continent_id = $1"
+    countries.id = cities.country_id WHERE continent_id = $1 ORDER BY id"
     values = [@id]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }

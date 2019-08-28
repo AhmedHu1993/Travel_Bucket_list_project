@@ -20,7 +20,7 @@ class Country
   end
 
   def self.all()
-    sql = "SELECT * FROM countries"
+    sql = "SELECT * FROM countries ORDER BY id"
     results = SqlRunner.run( sql )
     return results.map { |hash| Country.new( hash ) }
   end
@@ -46,7 +46,7 @@ class Country
   end
 
   def cities()
-    sql = "SELECT * FROM cities WHERE country_id = $1"
+    sql = "SELECT * FROM cities WHERE country_id = $1 ORDER BY id"
     values = [@id]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }
