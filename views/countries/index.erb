@@ -14,15 +14,15 @@
   <tr>
     <th>Country Name</th>
     <th></th>
-    <th>Continent</th>
     <th></th>
+    <th>Continent</th>
   </tr>
   <% for country in @countries %>
   <tr>
     <td><a href="/countries/<%= country.id %>"><%= country.name %></a></td>
+    <td><img src="<%= country.flag %>" alt="<%= country.name %> flag" id="flag_icon"></td>
     <td>|</td>
     <td><%= country.continent.name %></td>
-    <td>|</td>
     <!-- <td><a href="#" class="delete_city"></a></td> -->
   </tr>
   <% end %>

@@ -110,6 +110,11 @@ a:hover {
   height: 20px;
 }
 
+#flag_icon {
+  width: 20px;
+  padding-right: 20px;
+}
+
 #bar {
   height: 20px
 }
