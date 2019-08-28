@@ -27,6 +27,12 @@
   padding: 0px;
 }
 
+.continent_index {
+  display: flex;
+  justify-content: center;
+}
+
+
 .world_map {
   max-width: 1250px;
 }
@@ -37,6 +43,8 @@
 }
 body {
   font-family: 'Acme', cursive;
+  color:  #1D3557;
+
 }
 
 ul {
@@ -47,6 +55,39 @@ ul {
 li{
   padding-right: 30px;
   display: block;
+}
+
+h1{
+  margin-top: 0px;
+}
+
+h3{
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+a {
+  color: #457B9D;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#content {
+  background-image: url("images/flags1.png") ;
+  background-repeat: no-repeat;
+  height: 900px;
+
 }
 
 #search_bars {

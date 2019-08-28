@@ -1,28 +1,33 @@
 <h1><%= @city.name %></h1>
 
-<h2>Country: <%= @city.country.name %></h2>
-<h2>Continent: <%= @city.country.continent.name %></h2>
+<h3>Country: <%= @city.country.name %></h3>
+<h3>Continent: <%= @city.country.continent.name %></h3>
 
-<h3>Sight Names</h3>
-<% for sight in @sights %>
-<ul >
-    <li class="sights_list"><%= sight.name %>
-      <form  action="/sights/<%= sight.id %>/delete" method="post" style="margin-left:40px;">
-        <input type="image" src="/images/close_icon.png" alt="delete" id="close_icon">
-      </form>
-     </li>
+<h3>Sight Names:</h3>
+<table>
+  <% for sight in @sights %>
+  <tr>
+    <td>&#9674;</td>
+    <td><%= sight.name %></td>
+    <td></td>
+    <td><form  action="/sights/<%= sight.id %>/delete" method="post" style="margin-left:20px;">
+      <input type="image" src="/images/close_icon.png" alt="delete" id="close_icon">
+    </form></td>
+  </tr>
+  <% end %>
+</table>
 
-</ul>
-<% end %>
 <form action="/sights" method="post">
   <input type="text" name="name" placeholder="New Sight">
   <input type="hidden" name="city_id" value="<%= @city.id %>">
   <input type="submit" value="new sight">
 </form>
 
-<p><a href="/cities/<%= @city.id %>/edit">Edit</a></p>
+<a target="_blank" href="https://en.wikipedia.org/wiki/<%= @city.name %>">know more &#155;</a>
+<hr />
+
+<p><a href="/cities/<%= @city.id %>/edit" >Edit City</a></p>
 
 <form action="/cities/<%= @city.id %>/delete" method="post">
   <input type="submit" value="Delete City"/>
 </form>
-  <hr />
