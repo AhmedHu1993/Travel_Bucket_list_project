@@ -20,7 +20,7 @@
   background-size: cover;
   background-position: center;
   width:  auto;
-  height: 650px;
+  height: 750px;
   margin: 0px;
   padding: 0px;
 }
@@ -54,7 +54,9 @@
 }
 body {
   font-family: 'Nunito', sans-serif;
+  font-size: large;
   color:  #1D3557;
+  margin: 0px;
 }
 
 ul {
@@ -91,6 +93,10 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
+}
+
+nav {
+  margin-left: 15px;
 }
 
 #content {
@@ -148,7 +154,7 @@ a:hover {
   width: auto;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: : 2px;
   height: 100px;
   align-content: center;
   border-bottom: 1px solid #457B9D;
