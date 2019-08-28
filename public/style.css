@@ -13,6 +13,7 @@
 .home_page {
   background-image: url("images/index1.jpg");
   background-size: cover;
+  background-position: center;
   width:  auto;
   height: 650px;
   margin: 0px;
