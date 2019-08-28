@@ -21,7 +21,7 @@ class City
   end
 
   def self.all()
-    sql = "SELECT * FROM cities ORDER BY id"
+    sql = "SELECT * FROM cities ORDER BY country_id"
     results = SqlRunner.run( sql )
     return results.map { |hash| City.new( hash ) }
   end
@@ -47,14 +47,14 @@ class City
   end
 
   def self.visited()
-    sql = "SELECT * FROM cities WHERE visited = $1 ORDER BY id"
+    sql = "SELECT * FROM cities WHERE visited = $1 ORDER BY name"
     values = [true]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }
   end
 
   def self.to_visit()
-    sql = "SELECT * FROM cities WHERE visited = $1 ORDER BY id"
+    sql = "SELECT * FROM cities WHERE visited = $1 ORDER BY name"
     values = [false]
     results = SqlRunner.run( sql, values )
     return results.map { |hash| City.new( hash ) }
