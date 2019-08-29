@@ -24,7 +24,8 @@
     <tr>
       <td><a href="/cities/<%= city.id %>"><%= city.name %></a></td>
       <td>|</td>
-      <td><%= city.country.name %></td>
+      <td><%= city.country.name %> </td>
+      <td><img src="<%= city.country.flag %>" alt="" id="flag_icon"></td>
       <td>|</td>
       <td><%= city.country.continent.name %></td>
       <td>|</td>
