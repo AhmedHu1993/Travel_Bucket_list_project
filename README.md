@@ -5,3 +5,4 @@ this app has the capability to show the added list of cities by the user and giv
 to open the app you should first create a data base on your computer with name 'travel_list' and then from the commmand lines run the sql file inside the db folder with the data base using psql command, and then run seeds.rb file from the same folder.
 and then run the app.rb file which is the main route .
 finally open your browser and type localhost:4567/ and enjoy ;)
+OR YOU CAN OPEN THE APP FROM THE LINK INSIDE THE DESCIPTION WHICH IS LINKED TO HEROKU :)
