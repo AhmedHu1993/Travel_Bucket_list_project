@@ -6,3 +6,4 @@ to open the app you should first create a data base on your computer with name '
 and then run the app.rb file which is the main route .
 finally open your browser and type localhost:4567/ and enjoy ;)
 OR YOU CAN OPEN THE APP FROM THE LINK INSIDE THE DESCIPTION WHICH IS LINKED TO HEROKU :)
+https://travel-list-ah.herokuapp.com/
